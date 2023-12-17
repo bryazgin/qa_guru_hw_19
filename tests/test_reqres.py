@@ -39,7 +39,6 @@ def test_wrong_endpoint_login(default_url):
 
     assert result.status_code == 404
 
-# Добавил 201
 def test_create_user(default_url):
     result = requests.post(f'{default_url}users',
                           data={"name": "John", "job": "driver"})
